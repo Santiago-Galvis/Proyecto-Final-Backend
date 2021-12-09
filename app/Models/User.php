@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'image'
     ];
 
     /**
@@ -65,5 +66,10 @@ class User extends Authenticatable
     public function Forum_Questions()
     {
         return $this->hasMany(Forum_Question::class);
+    }
+
+    public function Services()
+    {
+        return $this->hasMany(Service::class);
     }
 }
